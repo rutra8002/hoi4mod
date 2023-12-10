@@ -1,0 +1,112 @@
+﻿focus_tree = {
+	id = ruras_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 100
+			tag = RUR
+		}
+
+	}
+	
+	default = no
+	
+	continuous_focus_position = { x = 50 y = 1000 }
+
+	focus = {
+		id = rura_thinks
+		icon = GFX_goal_generic_major_war
+		x = 3
+		y = 1
+		#relative_position_id = AST_empower_the_workers
+
+		available = {
+			NOT = { is_in_faction_with = GER }
+		}
+		
+		bypass = {
+
+		}
+
+		cost = 10
+		prerequisite = {}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 100
+		}
+
+		ai_will_do = {
+
+		}
+	}
+
+	focus = {
+		id = school
+		icon = GFX_goal_school
+		x = 2
+		y = 2
+		#relative_position_id = AST_empower_the_workers
+
+		available = {
+			NOT = { is_in_faction_with = GER }
+		}
+		
+		bypass = {
+
+		}
+
+		cost = 10
+		prerequisite = { focus = rura_thinks }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			stability_factor = -0.2
+		}
+
+		ai_will_do = {
+			
+		}
+	}
+
+	focus = {
+		id = topopisy
+		icon = GFX_goal_school
+		x = 1
+		y = 3
+		#relative_position_id = AST_empower_the_workers
+
+		available = {
+			NOT = { is_in_faction_with = GER }
+		}
+		
+		bypass = {
+
+		}
+
+		cost = 10
+		prerequisite = { focus = school }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			stability_factor = -0.2
+		}
+
+		ai_will_do = {
+			
+		}
+	}
+
+
+}		
